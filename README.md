@@ -6,7 +6,7 @@ https://myopenshiftblog.com/2021/04/07/backup-and-restore-of-etcd-cluster-state/
 
 The section of this document is called "Restore of Previous Cluster State"
 
-The scripts in this repo are numbered so it is intended that you either run the scripts or read the content in order.
+The scripts in this repo are numbered so it is intended that you either run the scripts and/or read the content (as applicable)
 
 Here is a high-level overview of how these scripts work.
 
