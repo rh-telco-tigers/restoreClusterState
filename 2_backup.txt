@@ -1,0 +1,15 @@
+Let's do a backup from the leader server since this will be the one that will be used to do restore.
+
+oc debug node/<leadernodethatetcdisrunningon> (listed in step 1)
+chroot /host
+
+/usr/local/bin/cluster-backup.sh /home/core/assets/backup/ (ensure there are no other backups in this directory prior to running)
+
+
+To test restore state, we will create a project called "thisprojectwilldissapear"
+
+oc new-project thisprojectwilldissapear
+
+The restore won't have this project
+
+

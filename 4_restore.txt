@@ -1,0 +1,9 @@
+SSH to the master that you are restoring from and run the following commands:
+
+Run “sudo -E /usr/local/bin/cluster-restore.sh /home/core/assets/backup"
+
+On all masters, run:
+
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
+
