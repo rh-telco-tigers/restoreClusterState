@@ -68,5 +68,5 @@ Here is a high-level overview of how these scripts work.
 
 9_final_check.sh
 
-  This is the final check to ensure that all etcd members are up
+  This is the final check to ensure that all etcd members are up.  Lastly, check the original project you created.  It should no longer be around since we      restored to a previous point-in-time.
   
