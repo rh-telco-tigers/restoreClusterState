@@ -40,10 +40,33 @@ Here is a high-level overview of how these scripts work.
   
 6_force_kubeapi_update
 
-  This script will force an kupeap update/restore.
+  This script will force an kupeapi update/restore.
   It will force a redeployment via the kubeapi operator, checks that all workloads are at latest revision and then exits
   Don't move on to next step until this script exits
   It is safe to exit the script and re-run but it may be best to comment out the patch section so that this part doesn't re-run
   Lastly, if any pods take a long time to update, delete that pod to force a redeployment
   In this case, the pods are in the openshift-apiserver project and are called apiserver.  You may need to do an "oc get po -o wide" to get the correct pod.
 
+7_force_kube_controllermanager_update
+
+  This script will force an kubecontrollermanager update/restore.
+  It will force a redeployment via the kubecontrollermanager operator, checks that all workloads are at latest revision and then exits
+  Don't move on to next step until this script exits
+  It is safe to exit the script and re-run but it may be best to comment out the patch section so that this part doesn't re-run
+  Lastly, if any pods take a long time to update, delete that pod to force a redeployment
+  In this case, the pods are in the openshift-controller-manager project and are called controller-manager.....  You may need to run an "oc get po -o wide" to     get the correct pod 
+
+
+8_force_kube_scheduler
+
+  This script will force an kubescheduler update/restore.
+  It will force a redeployment via the kubescheduler operator, checks that all workloads are at latest revision and then exits
+  Don't move on to next step until this script exits
+  It is safe to exit the script and re-run but it may be best to comment out the patch section so that this part doesn't re-run
+  Lastly, if any pods take a long time to update, delete that pod to force a redeployment
+  In this case, the pods are in the openshift-kube-scheduler project and are called openshift-kube-scheduler-masterx......  
+
+9_final_check.sh
+
+  This is the final check to ensure that all etcd members are up
+  
