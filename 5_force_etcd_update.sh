@@ -1,6 +1,6 @@
 #! /bin/bash
 
-set -x
+#set -x
 
 #This will force redeployment of etcd and check that everything is at same release
 
